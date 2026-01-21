@@ -35,30 +35,4 @@ This script will:
 
 ### Gitignore
 
-This repository uses a whitelist-style `.gitignore` to track only the necessary config files:
-
-```gitignore
-# Ignore everything by default
-*
-
-# Track the gitignore itself
-!.gitignore
-
-# Whitelist main directories
-!nvim/
-!fish/
-
-# Include everything inside these directories
-!nvim/**
-!fish/**
-
-# Track tmux symlink (at top level of repo)
-!tmux.conf
-
-# Optional: Ignore swap, temp, or backup files
-*.swp
-*.swo
-*.tmp
-*.bak
-```
-
+This repository uses a whitelist-style `.gitignore` to track only the necessary config files
