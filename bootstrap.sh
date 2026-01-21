@@ -12,10 +12,13 @@ FISH_SHELL=$(which fish || echo "/usr/bin/fish")
 echo "🚀 Starting dotfiles setup..."
 
 # install nvim binary
+
+# Download latest Neovim AppImage
 curl -LO https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.appimage
 chmod u+x nvim-linux-x86_64.appimage
-# Optionally move to /usr/local/bin
 sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+nvim --version
+
 
 # --- Step 0: Preliminary checks ---
 if ! command -v git &> /dev/null; then
@@ -23,9 +26,10 @@ if ! command -v git &> /dev/null; then
     exit 1
 fi
 
-# --- Step 1: Clone the dotfiles repo ---
-if [ -d "$CONFIG_DIR" ]; then
-    echo "⚠️ $CONFIG_DIR already exists. Skipping clone..."
+# Check if .config is already a git repo
+if [ -d "$CONFIG_DIR/.git" ]; then
+    echo "Repo already cloned in $CONFIG_DIR. Pulling latest changes..."
+    git -C "$CONFIG_DIR" pull
 else
     echo "Cloning dotfiles into $CONFIG_DIR..."
     git clone "$REPO_URL" "$CONFIG_DIR"
