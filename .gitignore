@@ -1,0 +1,16 @@
+# Ignore everything by default (in case other files appear in .config)
+*
+
+# Track the gitignore itself
+!.gitignore
+
+# Whitelist main directories
+!nvim/
+!fish/
+
+# Include everything inside these directories
+!nvim/**
+!fish/**
+
+# Track tmux symlink (at top level of repo)
+!tmux.conf

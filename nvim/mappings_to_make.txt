@@ -1,0 +1,2 @@
+tab - go between buffers
+leader x - close buffer
