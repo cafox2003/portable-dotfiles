@@ -11,6 +11,12 @@ FISH_SHELL=$(which fish || echo "/usr/bin/fish")
 
 echo "🚀 Starting dotfiles setup..."
 
+# install nvim binary
+curl -LO https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.appimage
+chmod u+x nvim.appimage
+# Optionally move to /usr/local/bin
+sudo mv nvim.appimage /usr/local/bin/nvim
+
 # --- Step 0: Preliminary checks ---
 if ! command -v git &> /dev/null; then
     echo "⚠️ Git is not installed. Please install git first."

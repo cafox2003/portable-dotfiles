@@ -7,22 +7,24 @@ This repository contains my portable dotfiles for **nvim**, **fish**, and **tmux
 The script does **not automatically install packages**. Please install them manually using the commands below, depending on your OS
 ```bash
 # Debian / Ubuntu
-sudo apt update && sudo apt install git fish tmux neovim
+sudo apt update && sudo apt install git fish tmux 
 
 # Fedora
-sudo dnf install git fish tmux neovim
+sudo dnf install git fish tmux 
 
 # Arch
-sudo pacman -Syu git fish tmux neovim
+sudo pacman -Syu git fish tmux 
 
 # macOS (Homebrew)
-brew install git fish tmux neovim
+brew install git fish tmux 
 ```
 
 You can set up a new system by running the following command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/cafox2003/portable-dotfiles/main/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/cafox2003/portable-dotfiles/main/bootstrap.sh -o ~/.config/bootstrap.sh
+chmod +x ~/.config/bootstrap.sh
+~/.config/bootstrap.sh
 ```
 
 This script will:
