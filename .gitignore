@@ -1,8 +1,10 @@
 # Ignore everything by default (in case other files appear in .config)
 *
 
-# Track the gitignore itself
+# Track the main files
 !.gitignore
+!README.md
+!bootstrap.sh
 
 # Whitelist main directories
 !nvim/
