@@ -14,9 +14,11 @@ echo "🚀 Starting dotfiles setup..."
 # install nvim binary
 
 # Download latest Neovim AppImage
-curl -LO https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
-sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz
+tar -xzf nvim-linux-x86_64.tar.gz
+sudo mv nvim-linux-x86_64 /opt/nvim
+sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
+rm nvim-linux-x86_64.tar.gz
 
 
 # --- Step 0: Preliminary checks ---
