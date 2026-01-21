@@ -7,16 +7,18 @@ This repository contains my portable dotfiles for **nvim**, **fish**, and **tmux
 The script does **not automatically install packages**. Please install them manually using the commands below, depending on your OS
 ```bash
 # Debian / Ubuntu
-sudo apt update && sudo apt install git fish tmux 
+sudo apt update && sudo apt install -y git fish tmux unzip build-essential
 
 # Fedora
-sudo dnf install git fish tmux 
+sudo dnf install -y git fish tmux unzip @development-tools
 
 # Arch
-sudo pacman -Syu git fish tmux 
+sudo pacman -Syu --noconfirm git fish tmux unzip base-devel
 
 # macOS (Homebrew)
-brew install git fish tmux 
+brew install git fish tmux unzip
+# macOS system headers for clang
+xcode-select --install
 ```
 
 You can set up a new system by running the following command:
