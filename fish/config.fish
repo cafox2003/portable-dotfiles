@@ -5,6 +5,8 @@ end
 #fish_vi_key_bindings
 #bind \ce complete
 
+alias b "cd .. && ls"
+
 fish_vi_key_bindings
 bind --mode insert \ce accept-autosuggestion
 
