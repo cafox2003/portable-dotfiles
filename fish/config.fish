@@ -18,6 +18,6 @@ set -g fish_greeting ""
 set -e PATH
 
 # Add CS3214 bin to PATH first, then standard directories
-set -gx PATH /home/ugrads/majors/calebf24/bin /usr/share/Modules/bin /home/courses/cs3214/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /var/lib/snapd/snap/bin /home/ugrads/majors/calebf24/.cargo/bin
+set -gx PATH /home/ugrads/majors/calebf24/bin /usr/share/Modules/bin /home/courses/cs3214/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /var/lib/snapd/snap/bin /home/ugrads/majors/calebf24/.cargo/bin /web/courses/cs4284/pintostools/bin
 
 
