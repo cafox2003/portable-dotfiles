@@ -52,19 +52,30 @@ return {
           "--background-index",
           "--clang-tidy",
           "--header-insertion=never",
-          "--compile-commands-dir=.", -- look for compile_commands.json in project root
         },
-        fallbackFlags = {
-          "-std=c11",
-          "-Wall",
-          "-Wextra",
-          "-Werror",
-          "-I../tree-sitter/lib/include",
-          "-I../tree-sitter-bash/src",
-        },
-        root_dir = require("lspconfig.util").root_pattern("compile_flags.txt", ".git"),
       },
     },
+    -- config = {
+    --   clangd = {
+    --     capabilities = { offsetEncoding = "utf-8" },
+    --     cmd = {
+    --       "clangd",
+    --       "--background-index",
+    --       "--clang-tidy",
+    --       "--header-insertion=never",
+    --       "--compile-commands-dir=.", -- look for compile_commands.json in project root
+    --     },
+    --     fallbackFlags = {
+    --       "-std=c11",
+    --       "-Wall",
+    --       "-Wextra",
+    --       "-Werror",
+    --       "-I../tree-sitter/lib/include",
+    --       "-I../tree-sitter-bash/src",
+    --     },
+    --     root_dir = require("lspconfig.util").root_pattern("compile_flags.txt", ".git"),
+    --   },
+    -- },
 
     -- config = {
     --
